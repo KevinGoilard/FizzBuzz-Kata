@@ -9,10 +9,18 @@ class FizzBuzz:
         if number % 3 == 0 and number % 5 == 0:
             return cls.FIZZ_BUZZ
 
-        if number % 5 == 0 or str(number).__contains__("5"):
+        if cls.is_buzz(number):
             return cls.BUZZ
 
-        if number % 3 == 0 or str(number).__contains__("3"):
+        if cls.is_fizz(number):
             return cls.FIZZ
 
         return number
+
+    @classmethod
+    def is_fizz(cls, number):
+        return number % 3 == 0 or str(number).__contains__("3")
+
+    @classmethod
+    def is_buzz(cls, number):
+        return number % 5 == 0 or str(number).__contains__("5")
