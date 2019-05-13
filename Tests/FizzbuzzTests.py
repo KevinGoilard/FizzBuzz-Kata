@@ -13,7 +13,7 @@ class FizzBuzzTests(unittest.TestCase):
         result = fizz_buzz.compute_string(1)
 
         expected = 1
-        self.assertEqual(result, expected)
+        self.assertEqual(expected, result)
 
     def test_three_return_Fizz(self):
         fizz_buzz = FizzBuzz()
@@ -21,7 +21,7 @@ class FizzBuzzTests(unittest.TestCase):
         result = fizz_buzz.compute_string(3)
 
         expected = "Fizz"
-        self.assertEqual(result, expected)
+        self.assertEqual(expected, result)
 
     def test_six_return_Fizz(self):
         fizz_buzz = FizzBuzz()
@@ -29,7 +29,7 @@ class FizzBuzzTests(unittest.TestCase):
         result = fizz_buzz.compute_string(6)
 
         expected = "Fizz"
-        self.assertEqual(result, expected)
+        self.assertEqual(expected, result)
 
     def test_five_return_Buzz(self):
         fizz_buzz: FizzBuzz = FizzBuzz()
@@ -37,4 +37,4 @@ class FizzBuzzTests(unittest.TestCase):
         result = fizz_buzz.compute_string(5)
 
         expected = "Buzz"
-        self.assertEqual(result, expected)
+        self.assertEqual(expected, result)
