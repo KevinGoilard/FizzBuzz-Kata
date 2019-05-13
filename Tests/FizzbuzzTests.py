@@ -7,7 +7,7 @@ class FizzBuzzTests(unittest.TestCase):
     def test_true(self):
         self.assertTrue(True)
 
-    def test_one_print_one(self):
+    def test_one_return_one(self):
         fizz_buzz:FizzBuzz = FizzBuzz()
 
         result = fizz_buzz.compute_string(1)
