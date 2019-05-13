@@ -6,6 +6,9 @@ class FizzBuzz:
 
     @classmethod
     def get_representation_for(cls, number):
+        if cls.is_fizz(number) and cls.is_buzz(number):
+            return cls.FIZZ_BUZZ
+
         if number % 3 == 0 and number % 5 == 0:
             return cls.FIZZ_BUZZ
 
