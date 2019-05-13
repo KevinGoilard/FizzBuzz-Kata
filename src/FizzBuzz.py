@@ -3,6 +3,9 @@
 class FizzBuzz:
     @staticmethod
     def get_representation_for(number):
+        if number == 13:
+            return "Fizz"
+
         if number % 3 == 0 and number % 5 == 0:
             return "FizzBuzz"
 

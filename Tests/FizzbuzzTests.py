@@ -54,3 +54,9 @@ class FizzBuzzTests(unittest.TestCase):
 
         expected = "FizzBuzz"
         self.assertEqual(expected, result)
+
+    def test_number_with_a_three_return_Fizz(self):
+        result = FizzBuzz.get_representation_for(13)
+
+        expected = "Fizz"
+        self.assertEqual(expected, result)
