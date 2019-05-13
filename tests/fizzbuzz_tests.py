@@ -6,8 +6,6 @@ from src import FizzBuzz
 
 
 class FizzBuzzTests(unittest.TestCase):
-    def test_true(self):
-        self.assertTrue(True)
 
     @parameterized.expand([
         (1,),
@@ -16,7 +14,7 @@ class FizzBuzzTests(unittest.TestCase):
     def test_not_fizz_or_buzz_number_return_itself(self, value):
         result = FizzBuzz.get_representation_for(value)
 
-        expected = value
+        expected = str(value)
         self.assertEqual(expected, result)
 
     @parameterized.expand([
