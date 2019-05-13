@@ -22,3 +22,11 @@ class FizzBuzzTests(unittest.TestCase):
 
         expected = "Fizz"
         self.assertEqual(result, expected)
+
+    def test_six_return_Fizz(self):
+        fizz_buzz = FizzBuzz()
+
+        result = fizz_buzz.compute_string(6)
+
+        expected = "Fizz"
+        self.assertEqual(result, expected)
