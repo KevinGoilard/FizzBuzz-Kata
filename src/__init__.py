@@ -1,1 +1,1 @@
-from src.FizzBuzz import FizzBuzz
+from src.fizzbuzz import FizzBuzz
