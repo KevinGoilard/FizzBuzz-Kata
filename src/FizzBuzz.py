@@ -1,7 +1,8 @@
 
 
 class FizzBuzz:
-    def compute_string(self, param):
+    @staticmethod
+    def compute_string(param):
         if param % 3 == 0 and param % 5 == 0:
             return "FizzBuzz"
 
