@@ -66,3 +66,15 @@ class FizzBuzzTests(unittest.TestCase):
 
         expected = FizzBuzz.FIZZ
         self.assertEqual(expected, result)
+
+    def test_number_with_a_five_return_Buzz(self):
+        result = FizzBuzz.get_representation_for(56)
+
+        expected = FizzBuzz.BUZZ
+        self.assertEqual(expected, result)
+
+    def test_number_with_a_five_return_Buzz_bis(self):
+        result = FizzBuzz.get_representation_for(52)
+
+        expected = FizzBuzz.BUZZ
+        self.assertEqual(expected, result)

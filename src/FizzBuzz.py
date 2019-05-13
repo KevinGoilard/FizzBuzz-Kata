@@ -9,7 +9,7 @@ class FizzBuzz:
         if number % 3 == 0 and number % 5 == 0:
             return cls.FIZZ_BUZZ
 
-        if number % 5 == 0:
+        if number % 5 == 0 or str(number).__contains__("5"):
             return cls.BUZZ
 
         if number % 3 == 0 or str(number).__contains__("3"):
