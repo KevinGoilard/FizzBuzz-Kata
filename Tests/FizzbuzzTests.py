@@ -1,3 +1,5 @@
+from parameterized import parameterized
+
 import unittest
 
 from src import FizzBuzz
@@ -7,85 +9,73 @@ class FizzBuzzTests(unittest.TestCase):
     def test_true(self):
         self.assertTrue(True)
 
-    def test_one_return_one(self):
-        result = FizzBuzz.get_representation_for(1)
+    @parameterized.expand([
+        (1,),
+        (2,),
+    ])
+    def test_not_fizz_or_buzz_number_return_itself(self, value):
+        result = FizzBuzz.get_representation_for(value)
 
-        expected = 1
+        expected = value
         self.assertEqual(expected, result)
 
-    def test_two_return_two(self):
-        result = FizzBuzz.get_representation_for(2)
-
-        expected = 2
-        self.assertEqual(expected, result)
-
-    def test_three_return_Fizz(self):
-        result = FizzBuzz.get_representation_for(3)
+    @parameterized.expand([
+        (3,),
+        (6,),
+    ])
+    def test_multiple_of_three_return_Fizz(self, value):
+        result = FizzBuzz.get_representation_for(value)
 
         expected = FizzBuzz.FIZZ
         self.assertEqual(expected, result)
 
-    def test_six_return_Fizz(self):
-        result = FizzBuzz.get_representation_for(6)
-
-        expected = FizzBuzz.FIZZ
-        self.assertEqual(expected, result)
-
-    def test_five_return_Buzz(self):
-        result = FizzBuzz.get_representation_for(5)
+    @parameterized.expand([
+        (5,),
+        (10,),
+    ])
+    def test_multiple_of_five_return_Buzz(self, value):
+        result = FizzBuzz.get_representation_for(value)
 
         expected = FizzBuzz.BUZZ
         self.assertEqual(expected, result)
 
-    def test_ten_return_Buzz(self):
-        result = FizzBuzz.get_representation_for(10)
-
-        expected = FizzBuzz.BUZZ
-        self.assertEqual(expected, result)
-
-    def test_fifteen_return_FizzBuzz(self):
-        result = FizzBuzz.get_representation_for(15)
+    @parameterized.expand([
+        (15,),
+        (30,),
+    ])
+    def test_multiple_of_five_and_three_return_FizzBuzz(self, value):
+        result = FizzBuzz.get_representation_for(value)
 
         expected = FizzBuzz.FIZZ_BUZZ
         self.assertEqual(expected, result)
 
-    def test_thirty_return_FizzBuzz(self):
-        result = FizzBuzz.get_representation_for(30)
-
-        expected = FizzBuzz.FIZZ_BUZZ
-        self.assertEqual(expected, result)
-
-    def test_number_with_a_three_return_Fizz(self):
-        result = FizzBuzz.get_representation_for(13)
+    @parameterized.expand([
+        (13,),
+        (23,),
+    ])
+    def test_number_with_a_three_return_Fizz(self, value):
+        result = FizzBuzz.get_representation_for(value)
 
         expected = FizzBuzz.FIZZ
         self.assertEqual(expected, result)
 
-    def test_number_with_a_three_return_Fizz_bis(self):
-        result = FizzBuzz.get_representation_for(23)
-
-        expected = FizzBuzz.FIZZ
-        self.assertEqual(expected, result)
-
-    def test_number_with_a_five_return_Buzz(self):
-        result = FizzBuzz.get_representation_for(56)
+    @parameterized.expand([
+        (56,),
+        (52,),
+    ])
+    def test_number_with_a_five_return_Buzz(self, value):
+        result = FizzBuzz.get_representation_for(value)
 
         expected = FizzBuzz.BUZZ
         self.assertEqual(expected, result)
 
-    def test_number_with_a_five_return_Buzz_bis(self):
-        result = FizzBuzz.get_representation_for(52)
-
-        expected = FizzBuzz.BUZZ
-        self.assertEqual(expected, result)
-
-    def test_number_fizz_with_a_five_return_fizzbuzz(self):
+    def test_number_fizz_with_a_five_return_FizzBuzz(self):
         result = FizzBuzz.get_representation_for(51)
 
         expected = FizzBuzz.FIZZ_BUZZ
         self.assertEqual(expected, result)
 
-    def test_number_buzz_with_a_three_return_fizzbuzz(self):
+    def test_number_buzz_with_a_three_return_FizzBuzz(self):
         result = FizzBuzz.get_representation_for(130)
 
         expected = FizzBuzz.FIZZ_BUZZ
