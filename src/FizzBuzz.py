@@ -1,5 +1,7 @@
 
 
 class FizzBuzz:
-    def ComputeString(self, param):
+    def compute_string(self, param):
+        if param == 3:
+            return "Fizz"
         return 1
