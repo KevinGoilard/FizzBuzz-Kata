@@ -22,41 +22,41 @@ class FizzBuzzTests(unittest.TestCase):
     def test_three_return_Fizz(self):
         result = FizzBuzz.get_representation_for(3)
 
-        expected = "Fizz"
+        expected = FizzBuzz.FIZZ
         self.assertEqual(expected, result)
 
     def test_six_return_Fizz(self):
         result = FizzBuzz.get_representation_for(6)
 
-        expected = "Fizz"
+        expected = FizzBuzz.FIZZ
         self.assertEqual(expected, result)
 
     def test_five_return_Buzz(self):
         result = FizzBuzz.get_representation_for(5)
 
-        expected = "Buzz"
+        expected = FizzBuzz.BUZZ
         self.assertEqual(expected, result)
 
     def test_ten_return_Buzz(self):
         result = FizzBuzz.get_representation_for(10)
 
-        expected = "Buzz"
+        expected = FizzBuzz.BUZZ
         self.assertEqual(expected, result)
 
     def test_fifteen_return_FizzBuzz(self):
         result = FizzBuzz.get_representation_for(15)
 
-        expected = "FizzBuzz"
+        expected = FizzBuzz.FIZZ_BUZZ
         self.assertEqual(expected, result)
 
     def test_thirty_return_FizzBuzz(self):
         result = FizzBuzz.get_representation_for(30)
 
-        expected = "FizzBuzz"
+        expected = FizzBuzz.FIZZ_BUZZ
         self.assertEqual(expected, result)
 
     def test_number_with_a_three_return_Fizz(self):
         result = FizzBuzz.get_representation_for(13)
 
-        expected = "Fizz"
+        expected = FizzBuzz.FIZZ
         self.assertEqual(expected, result)

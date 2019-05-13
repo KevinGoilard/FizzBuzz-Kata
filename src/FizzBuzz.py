@@ -1,18 +1,21 @@
 
-
 class FizzBuzz:
-    @staticmethod
-    def get_representation_for(number):
+    BUZZ = "Buzz"
+    FIZZ_BUZZ = "FizzBuzz"
+    FIZZ = "Fizz"
+
+    @classmethod
+    def get_representation_for(cls, number):
         if number == 13:
-            return "Fizz"
+            return cls.FIZZ
 
         if number % 3 == 0 and number % 5 == 0:
-            return "FizzBuzz"
+            return cls.FIZZ_BUZZ
 
         if number % 5 == 0:
-            return "Buzz"
+            return cls.BUZZ
 
         if number % 3 == 0:
-            return "Fizz"
+            return cls.FIZZ
 
         return number
