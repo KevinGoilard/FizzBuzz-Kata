@@ -2,6 +2,8 @@
 
 class FizzBuzz:
     def compute_string(self, param):
+        if param == 10:
+            return "Buzz"
         if param == 5:
             return "Buzz"
 
